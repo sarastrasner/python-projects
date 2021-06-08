@@ -51,7 +51,7 @@ def run_machine():
         # TODO Make sure there's enough resources when the user orders a drink
         # TODO If not enough print "Sorry, not enough water"
         if not check_resources(item_ordered):
-            run_machine()
+            continue
 
         cost_of_item_ordered = float(MENU[item_ordered]['cost']) * 100
         print(f"You ordered a {item_ordered}, which costs ${MENU[item_ordered]['cost']}0.")
@@ -64,7 +64,7 @@ def run_machine():
         print(f"You inserted ${total_currency_inserted/100}.")
         if total_currency_inserted < cost_of_item_ordered:
             print("Sorry that's not enough money. Money refunded.")
-            run_machine()
+            continue
         else:
             # TODO: Process coins and give appropriate change
             change_due = (total_currency_inserted - cost_of_item_ordered) / 100
