@@ -1,4 +1,13 @@
-# Coffee Machine Program Requirements
+# Coffee Machine
+A virtual coffee machine that takes orders, 
+checks available resources (coffee, water, milk) before 
+fulfilling orders, processes payments and gives change, and renders a report of 
+the machine's current resources and money.
+
+## Run this Code on Repl.it
+https://replit.com/@SaraStrasner/CoffeeMachine#main.py
+
+## Coffee Machine Program Requirements
 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
     1. Check the user’s input to decide what to do next.
     1. The prompt should show every time action has completed, e.g. once the drink is dispensed. The prompt should show again to serve the next customer.
