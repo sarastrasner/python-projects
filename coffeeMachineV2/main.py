@@ -20,10 +20,11 @@ def run_machine():
         else:
             validated_order = menu.find_drink(order)
             # TODO: Check resources sufficient
-            if coffee_maker.is_resource_sufficient(validated_order):
-                # TODO: Process Coins
-                # TODO: Check transaction successful
-                money_machine.make_payment(validated_order.cost)
+            is_enough_ingredients = coffee_maker.is_resource_sufficient(validated_order)
+            # TODO: Process Coins
+            is_payment_successful = money_machine.make_payment(validated_order.cost)
+            # TODO: Check transaction successful
+            if is_enough_ingredients and is_payment_successful:
                 coffee_maker.make_coffee(validated_order)
 
 
