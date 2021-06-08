@@ -2,6 +2,9 @@
 This is an updated version of [Coffee Machine](https://github.com/sarastrasner/python-projects/tree/main/coffeeMachine), 
 which has been refactored using Object-Oriented Programming.
 
+## Run this Code on Repl.it
+https://replit.com/@SaraStrasner/Coffee-Machine-v2
+
 ## Coffee Machine Program Requirements
 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
     1. Check the user’s input to decide what to do next.
