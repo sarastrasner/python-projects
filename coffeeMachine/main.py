@@ -1,4 +1,4 @@
-from data import MENU, resources
+from data import MENU, resources, logo
 
 
 def check_resources(item):
@@ -27,6 +27,7 @@ def reduce_resources(item):
 
 
 def run_machine():
+    print(logo)
     money = 0
     while True:
         order = input("What would you like? (espresso/latte/cappuccino): ").lower()
@@ -67,12 +68,13 @@ def run_machine():
         else:
             # TODO: Process coins and give appropriate change
             change_due = (total_currency_inserted - cost_of_item_ordered) / 100
-            print(f"Here is your ${change_due} in change.\nHere is your {item_ordered}. Enjoy!")
+            print(f"Here is your ${change_due} in change.\nHere is your {item_ordered} ☕️. Enjoy!")
             # TODO If transaction was successful, deduct the resources
             reduce_resources(item_ordered)
+            # TODO: total money in machine
             money += cost_of_item_ordered
 
 
 run_machine()
 
-# TODO: total money in machine
+
