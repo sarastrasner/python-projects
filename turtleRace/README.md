@@ -1,16 +1,19 @@
 # Turtle Race
-A digital art creator inspired by Damien Hirst's spot paintings, which feature rows of randomly colored 
-circles. These paintings sell for as much as $3.4 million and are often made by his assistants.
-
+A digital turtle race built using event listeners, state, and multiple instances of Turtle Graphics. The user is 
+asked to predict a winner, and each turtle takes a random number of steps until a winner crosses the finish line.
 
 ## Turtle Race Program Requirements
-- use Turtle objects from Turtle
-- create a 10 X 10 grid of dots
-- use [colorgram.py](https://pypi.org/project/colorgram.py/) to sample colors from an existing Hirst painting
-- each dot is a random color
-- each dot is 20 pixels
-- dots are spaced 50 pixels apart
+- Instantiate Turtle objects from [Turtle](https://docs.python.org/3/library/turtle.html)
+- Ask the user who they think will win the Turtle Race
+- For each color in a colors array, instantiate a turtle object of that color
+- Place each turtle on the same x-axis toward the left of the screen
+- Repetitively move each turtle forward a random distance until a winner crosses the finish line
+- once a winner crosses the finish line
+    - end all turtles' movement
+    - let the user know if their prediction was correct
+    
+
 
 ![Giphy](https://media.giphy.com/media/Ke1O3BuTBxJtU9iboY/giphy.gif)
 
-## [Run this Code on Repl.it](https://replit.com/@SaraStrasner/Hirst-Painting)
+## [Run this Code on Repl.it](https://replit.com/@SaraStrasner/Day-19-Turtle-Race)
