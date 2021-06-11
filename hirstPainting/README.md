@@ -14,6 +14,6 @@ circles. These paintings sell for as much as $3.4 million and are often made by 
 - dots are spaced 50 pixels apart
 
 ## A "spot painting" created by my app
-![my Hirst](my_hirst.jpg)
+![my Hirst](https://media.giphy.com/media/iJlcp1I0i9pMOPwhUb/giphy.gif)
 
 ## [Run this Code on Repl.it](https://replit.com/@SaraStrasner/Hirst-Painting)
