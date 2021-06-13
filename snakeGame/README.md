@@ -10,4 +10,4 @@ Part 1 of the two-part build of the classic Snake Game. Built using Object-Orien
 - Create methods for up, down, right, and left
 - Bind the four directional methods to keystrokes
 
-##[Run this code on Repl.it](https://replit.com/@SaraStrasner/Day-20-Snake-Pt1)
+## [Run this code on Repl.it](https://replit.com/@SaraStrasner/Day-20-Snake-Pt1)
