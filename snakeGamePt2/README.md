@@ -1,4 +1,6 @@
 # Snake Game Part II
+Part II of the [Snake Game Part I](https://github.com/sarastrasner/python-projects/tree/main/snakeGame) build. 
+Creates and updates a scoreboard and detects collisions with food, wall or tail. Built using Object-Oriented Programming and class inheritance. 
 
 ![Snake Game Part 2](https://media.giphy.com/media/bhQfYp2ZGoy0mzhJ1S/giphy.gif)
 
