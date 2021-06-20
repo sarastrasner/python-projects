@@ -8,6 +8,6 @@
 1. Check if the guess is among the 50 states
 1. Record the correct guesses in a list
 1. Keep count of correct answers and display as title
-
+1. Once the user ends the game, create a list of states they need to study.
 
 
