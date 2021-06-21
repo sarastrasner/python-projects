@@ -1,6 +1,6 @@
 # Nato Alphabet
 Returns the NATO alphabet for each letter in a user input string. Built using list and dictionary comprehension. 
-Pandas is used to imprt and read a .csv file of the NATO alphabet. 
+Pandas is used to import, read, and manipulate a .csv file of the NATO alphabet. 
 
 ![Nato Screenshot](nato_screenshot.png)
 
