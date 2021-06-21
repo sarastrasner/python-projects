@@ -32,9 +32,7 @@ while len(correct_answers) < 50:
     answer_state = screen.textinput(title=f"{len(correct_answers)}/50 States Correct", prompt="What's another state's name?").title()
     # TODO: Check if the guess is among the 50 states
     if answer_state == "Exit":
-        for state in list_of_states:
-            if state not in correct_answers:
-                states_to_learn.append(state)
+        states_to_learn = [state for state in list_of_states if state not in correct_answers]
         df = pd.DataFrame({'States to Learn': states_to_learn})
         df.to_csv("states_to_learn.csv")
         break
