@@ -1,16 +1,11 @@
-# This is a sample Python script.
+import pandas
+data = pandas.read_csv("nato_phonetic_alphabet.csv")
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# TODO 1. Create a dictionary in this format:
+# {"A": "Alfa", "B": "Bravo"}
+nato_dict = {row.letter: row.code for (index, row) in data.iterrows()}
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# TODO 2. Create a list of the phonetic code words from a word that the user inputs.
+word_to_translate = input("Enter a word: ").upper()
+output_list = [nato_dict[letter] for letter in word_to_translate]
+print(output_list)
