@@ -1,16 +1,34 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from tkinter import *
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def miles_to_km():
+    miles = float(miles_input.get())
+    km = miles * 1.609
+    kilometer_result_label.config(text=f"{km}")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# Creating a new window and configurations
+window = Tk()
+window.title("Miles to Kilometer Converter")
+window.config(padx=20, pady=20)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Entry
+miles_input = Entry(width=7)
+miles_input.grid(column=1, row=0)
+
+# Labels
+miles_label = Label(text="Miles")
+miles_label.grid(column=2, row=0)
+is_equal_label = Label(text="is equal to")
+is_equal_label.grid(column=0, row=1)
+kilometer_result_label = Label(text="0")
+kilometer_result_label.grid(column=1, row=1)
+kilometer_label = Label(text="km")
+kilometer_label.grid(column=2, row=1)
+
+# Button
+calculate_button = Button(text="Calculate", command=miles_to_km)
+calculate_button.grid(column=1, row=2)
+
+
+window.mainloop()
