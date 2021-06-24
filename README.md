@@ -9,8 +9,9 @@ I am a fullstack JavaScript developer currently learning Python. This repo conta
 
 ### Links and Resources
 
-- [Latest PR](https://github.com/sarastrasner/python-projects/pull/1)
+- [Latest PR](https://github.com/sarastrasner/python-projects/pull/31)
 - [front-end application](https://strassy-does-python.vercel.app/) 
+- [100 Days of Code Course Syllabus](./assets/100DaysofPythonSyllabus.pdf)
 
 
 
