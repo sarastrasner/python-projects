@@ -2,6 +2,8 @@
 An updated version of the password manager that handles exceptions related to the `data.json` file. This version also
 has a search feature so users can search for an existing password.
 
+![V2 Screenshot](passwordManagerv2.jpg)
+
 # Feature Tasks
 1. Save data as `.JSON` instead of `.txt`
    1. Read, write, and update data from JSON
