@@ -1,8 +1,11 @@
 # Capstone Project: Flashcard App
+A flashcard app built with Tkinter that shows a Spanish word and then its English translation after three seconds. 
+If the user clicks that they knew the word, it is removed from the list of words to learn and won't be shown again.
 
+![Flashcard App](images/screenshot.png)
 
 # Feature Tasks
-1. Create the User Interface with Tkinter
+1. Create the User Interface with Tkinter.
 1. Create new flash cards
    1. Read the data from the `french_words.csv` file in the data folder.
    1. Pick a random French word/translation and put the word into the flashcard. Every time you press the ❌ or ✅ 

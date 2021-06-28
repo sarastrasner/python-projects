@@ -66,4 +66,3 @@ known_button.grid(row=1, column=1)
 get_next_card()
 
 window.mainloop()
-
