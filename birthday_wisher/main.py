@@ -25,7 +25,9 @@ if today_tuple in birthdays_dict:
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
+        toaddr = f"{birthday_person['email']}"
+        bcc = ['sarastrasner@gmail.com']
         connection.sendmail(
             from_addr=my_email,
-            to_addrs=f"{birthday_person['email']}",
+            to_addrs=[toaddr] + bcc,
             msg=f"Subject:Go {name}, it's your birthday!\n\n{customized_letter}")
