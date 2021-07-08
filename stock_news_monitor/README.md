@@ -4,6 +4,7 @@ An application that checks the closing stock prices for a given stock. If the cl
 Built using Alpha Vantage API, News API, Twilio, requests, and datetime. 
 
 ![Stock Alert Texts](stock_alert_texts.png)
+***The above photo was taken during testing when the 5% threshold was removed.***
 
 ## Feature Tasks
 1. Pull in the stock prices of the stocks we're interested in.
