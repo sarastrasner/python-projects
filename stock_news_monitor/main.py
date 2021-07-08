@@ -60,7 +60,7 @@ if price_difference_percentage > 5:
         client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
         message = client.messages \
             .create(
-            body=f"{STOCK_NAME}: {difference_symbol}{price_difference_percentage}%\nHeadline: {item[0]}\nBrief {item[1]}",
+            body=f"{STOCK_NAME}: {difference_symbol}{price_difference_percentage}%\nHeadline: {item[0]}\nBrief: {item[1]}",
             from_='+16789819663',
             to=MY_NUMBER
         )
