@@ -41,7 +41,7 @@ else:
 price_difference_percentage = round(price_difference / yesterday_closing[1] * 100, 2)
 
 # TODO 5. - If TODO4 percentage is greater than 5 then print("Get News").
-if price_difference_percentage < 5:
+if price_difference_percentage > 5:
     print("Get news")
     # TODO 6. - Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
     response = requests.get(
