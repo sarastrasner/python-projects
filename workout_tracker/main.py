@@ -1,16 +1,56 @@
-# This is a sample Python script.
+import requests
+from datetime import datetime
+import os
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+GENDER = "female"
+WEIGHT_KG = 63.5
+HEIGHT_CM = 177.8
+AGE = 32
 
+APP_ID = os.environ.get("APP_ID")
+API_KEY = os.environ.get("API_KEY")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
+sheet_endpoint = os.environ.get("SHEETY_ENDPOINT")
 
+exercise_text = input("Tell me which exercises you did: ")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+headers = {
+    "x-app-id": APP_ID,
+    "x-app-key": API_KEY,
+}
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+parameters = {
+    "query": exercise_text,
+    "gender": GENDER,
+    "weight_kg": WEIGHT_KG,
+    "height_cm": HEIGHT_CM,
+    "age": AGE
+}
+
+response = requests.post(exercise_endpoint, json=parameters, headers=headers)
+result = response.json()
+print(result)
+
+today_date = datetime.now().strftime("%d/%m/%Y")
+now_time = datetime.now().strftime("%X")
+
+bearer_headers = {
+    "Authorization": f"Bearer {os.environ.get('TOKEN')}"
+}
+
+for exercise in result["exercises"]:
+    sheet_inputs = {
+        "workout": {
+            "date": today_date,
+            "time": now_time,
+            "exercise": exercise["name"].title(),
+            "duration": exercise["duration_min"],
+            "calories": exercise["nf_calories"]
+        }
+    }
+
+    sheet_response = requests.post(sheet_endpoint, json=sheet_inputs, headers=bearer_headers)
+
+    print(sheet_response.text)
+
