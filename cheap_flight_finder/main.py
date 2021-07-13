@@ -1,16 +1,17 @@
-# This is a sample Python script.
+#This file will need to use the DataManager,FlightSearch, FlightData, NotificationManager classes to achieve
+# the program requirements.
+from pprint import pprint
+from data_manager import DataManager
+from flight_search import FlightSearch
+data_manager = DataManager()
+flight_search = FlightSearch()
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+pprint(data_manager.sheet_data)
 
+for city in data_manager.sheet_data:
+    if not city['iataCode']:
+        city['iataCode'] = flight_search.get_iata_code(city['city'])
+        data_manager.update_sheet(city)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(data_manager.sheet_data)
+# You should use the response from the FlightSearch class to update the sheet_data dictionary.
