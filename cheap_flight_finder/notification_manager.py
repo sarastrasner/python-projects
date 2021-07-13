@@ -1,14 +1,11 @@
 import os
-from dotenv import load_dotenv
+from twilio.rest import Client
 
-load_dotenv()
+TWILIO_SID = os.environ['TWILIO_SID']
+TWILIO_AUTH_TOKEN = os.environ['TWILIO_AUTH_TOKEN']
+TWILIO_VIRTUAL_NUMBER = os.environ['TWILIO_VIRTUAL_NUMBER']
+TWILIO_VERIFIED_NUMBER = os.environ['TWILIO_VERIFIED_NUMBER']
 
-MY_ENV_VAR = os.getenv('MY_ENV_VAR')
-
-
-TWILIO_AUTH_TOKEN = YOUR TWILIO AUTH TOKEN
-TWILIO_VIRTUAL_NUMBER = YOUR TWILIO VIRTUAL NUMBER
-TWILIO_VERIFIED_NUMBER = YOUR TWILIO VERIFIED NUMBER
 
 class NotificationManager:
 
@@ -23,3 +20,4 @@ class NotificationManager:
         )
         # Prints if successfully sent.
         print(message.sid)
+
