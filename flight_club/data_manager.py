@@ -1,7 +1,10 @@
+import os
+from pprint import pprint
 import requests
+import os
 
-SHEETY_PRICES_ENDPOINT = "https://api.sheety.co/cd2032a301bfec59875e473905557478/flightDeals/prices"
-
+SHEETY_PRICES_ENDPOINT = os.environ["SHEETY_PRICES_ENDPOINT"]
+SHEETY_USERS_ENDPOINT = os.environ["SHEETY_USERS_ENDPOINT"]
 
 class DataManager:
 
@@ -26,3 +29,10 @@ class DataManager:
                 json=new_data
             )
             print(response.text)
+
+    def get_customer_emails(self):
+        customers_endpoint = SHEETY_USERS_ENDPOINT
+        response = requests.get(url=customers_endpoint)
+        data = response.json()
+        self.customer_data = data["users"]
+        return self.customer_data

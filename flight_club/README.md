@@ -1,17 +1,11 @@
-# Cheap Flight Finder Pt I
-A cheap flight finder that reads city data and maximum prices from a Google sheet and checks for the cheapest flights from tomorrow to 6 months later for all the cities in the Google Sheet. If the price is lower than the lowest price listed in the Google Sheet, it sends an SMS to me. Uses Object-Oriented Programming, the Sheety API, Kiwi Partners Flight Search API, Tequila Flight Search API, and Twilio SMS API.
+# Flight Club
+A continuation of the [Cheap Flight Finder project](https://github.com/sarastrasner/python-projects/tree/main/cheap_flight_finder) that accomodates multiple users, handles exceptions, handles destinations without direct flights, and emails all users when deals arise. 
 
 # Feature Tasks
-1. Use the Flight Search and Sheety API to populate your own copy of the Google Sheet with International Air Transport Association (IATA) codes for each city. Most of the cities in the sheet include multiple airports, you want the city code (not the airport code).
-1. Use the Flight Search API to check for the cheapest flights from tomorrow to 6 months later for all the cities in the Google Sheet.
-1. If the price is lower than the lowest price listed in the Google Sheet then send an SMS to your own number with the Twilio API.
-1. The SMS should include the departure airport IATA code, destination airport IATA code, departure city, destination city, flight price and flight dates. e.g.
-1. Toggle these options when setting up with the API providers
-1. Avoid making too many unnecessary requests with the Sheety API while testing your code. The free tier for the Sheety API only allows 200 requests per month.
-1. Also, enable the PUT option so that you can write to your Google sheet
-1. Register with the Kiwi Partners Flight Search API
-1. Your account name should be the same as what you used later in "First name" and "Last name".
-1. There is no need to provide a credit card or billing information (you can skip that section) when you create your "Solution" (previously called "Application").
-1. When registering for your API key choose Meta Search as your product type.
-1. Then choose One-Way and Return.
-
+1. Create the customer acquisition code on Repl.it. This is how new users will sign up for our service and be added to the Google Sheet of all users.
+    1. Use the Sheety API to POST the data that the user enters into the user sheet in your Copy of Flight Deals Google Sheet.
+1. For some destinations, certain time periods, there will be no flights available. We need to add exception handling to our code so that it doesn't break and crash in these situations.
+1. Handle destinations without direct flights:
+   1. If a flight is not found, check to see if there are flights with 1 stop and pretty print the result with pprint().
+   1. Modify the FlightData class to add 2 optional init parameters with default values - stop_overs=0 and via_city="" . Instead of the printing the result from (1.) above, create a flight object with stop_overs set to 1 and via_city as the name of stopover city. Examine the data you printed in (1.) carefully to extract the information for origin_city, origin_airport, destination_city, destination_airport, out_date, and return_date .
+1. Notify all customers when there is a good deal.
