@@ -2,7 +2,7 @@
 A continuation of the [Cheap Flight Finder project](https://github.com/sarastrasner/python-projects/tree/main/cheap_flight_finder) that accomodates multiple users, handles exceptions, handles destinations without direct flights, and emails all users when deals arise. 
 
 # Feature Tasks
-1. Create the customer acquisition code on Repl.it. This is how new users will sign up for our service and be added to the Google Sheet of all users.
+1. Create the customer acquisition code on [Repl.it](https://replit.com/@SaraStrasner/Flight-Club-Signup#main.py). This is how new users will sign up for our service and be added to the Google Sheet of all users.
     1. Use the Sheety API to POST the data that the user enters into the user sheet in your Copy of Flight Deals Google Sheet.
 1. For some destinations, certain time periods, there will be no flights available. We need to add exception handling to our code so that it doesn't break and crash in these situations.
 1. Handle destinations without direct flights:
