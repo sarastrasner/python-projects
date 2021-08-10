@@ -1,5 +1,7 @@
 # Selenium Webdriver Projects
+Uses Selenium Webdriver to create a bot that plays Cookie Clicker by clicking on the cookie as fast as possible. Every 5 seconds, it checks the right-hand pane to see which upgrades are affordable and purchase the most expensive one. Every 5 minutes, the bot stops and prints the cookies per second.
 
+![Cookie Clicker](cookies.gif)
 
 ## Feature Tasks
 1. Go to the game website and familiarise yourself with how it works: `http://orteil.dashnet.org/experiments/cookie/` 
