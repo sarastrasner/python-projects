@@ -2,9 +2,6 @@ import datetime as dt
 import random
 import smtplib
 
-my_email = "strassy.mail@gmail.com"
-password = "PHEP*goft9gnau1sall"
-
 # TODO: Monday Motivational Email
 # TODO: create list of all lines of txt file
 # TODO: check that the day of the week is the current day
