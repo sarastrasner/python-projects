@@ -32,8 +32,8 @@ def apply(query):
     # all_listings = driver.find_elements_by_class_name("jobs-search-results__list-item")
 
     for listing in all_listings:
-        actions = ActionChains(driver)
-        actions.move_to_element(listing).perform()
+        # actions = ActionChains(driver)
+        # actions.move_to_element(listing).perform()
         listing.click()
         time.sleep(2)
 
