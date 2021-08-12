@@ -10,11 +10,10 @@ ACCOUNT_PASSWORD = os.environ['ACCOUNT_PASSWORD']
 
 keyword_list = ['software%20engineer', 'associate%20software', 'software%20engineer%20intern', 'frontend%20developer', 'react%20developer']
 
-chrome_driver_path = "/Users/sarastrasner/Development/chromedriver"
-driver = webdriver.Chrome(chrome_driver_path)
-
 
 def apply(query):
+    chrome_driver_path = "/Users/sarastrasner/Development/chromedriver"
+    driver = webdriver.Chrome(chrome_driver_path)
     driver.get(f'https://www.linkedin.com/jobs/search/?f_AL=true&f_WRA=true&geoId=103644278&keywords={query}&location=United%20States')
 
     sign_in_button = driver.find_element_by_link_text("Sign in")
